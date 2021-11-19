@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { useQuery, gql } from "@apollo/client";
-// import { Card, CardContent } from '@mui/material';
+import { Card, CardContent } from '@mui/material';
 
 const EXCHANGE_RATES = gql`
   query GetExchangeRates($exchangeName: String!) {
@@ -24,14 +24,16 @@ const ExchangeRate: FC<ExchangeRateProps> = ({ exchangeName }) => {
   if (error) return <p>Error :(</p>;
 
   return (
-    <div className="widget-currency-col">
-      <h4>{exchangeName}</h4>
-      <span>${data.exchange.compra} / </span>
-      <span>${data.exchange.venta}</span>
-      <div>
-        <span>{data.exchange.fecha}</span>
-      </div>
-    </div>
+    <Card>
+      <CardContent>
+        <h4>{exchangeName}</h4>
+        <span>${data.exchange.compra} / </span>
+        <span>${data.exchange.venta}</span>
+        <div>
+          <span>{data.exchange.fecha}</span>
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

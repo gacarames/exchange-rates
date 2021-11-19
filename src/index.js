@@ -13,8 +13,8 @@ import {
 } from "@apollo/client";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/',
-  // uri: 'https://exchenge-rates-api.vercel.app/',
+  // uri: 'http://localhost:4000/',
+  uri: 'https://exchenge-rates-api.vercel.app/',
   cache: new InMemoryCache()
 });
 
