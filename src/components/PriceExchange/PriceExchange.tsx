@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery, gql } from "@apollo/client";
 // import { Card, CardContent } from '@mui/material';
 
