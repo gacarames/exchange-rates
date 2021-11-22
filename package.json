@@ -1,6 +1,6 @@
 {
   "name": "my-app-temp",
-  "homepage": "https://gacarames.github.io/exchange-rates",
+  "homepage": ".",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
