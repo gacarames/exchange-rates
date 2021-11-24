@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import ExchangeRate from './components/ExchangeRate';
 import PriceExchange from './components/PriceExchange';
 import logo from './logo.svg';
@@ -7,7 +7,7 @@ import './App.css';
 function App() {
 
   return (
-    <Router>
+    <HashRouter basename={'/exchenge-rates'}>
       <Routes>
         <Route path='/' element={
           (<div className="App">
@@ -39,10 +39,9 @@ function App() {
             </>
           }
         />
-        <Route exact
-          path="/exchanges/:id" element={<PriceExchange />} />
+        <Route exact path="/exchanges/:id" element={<PriceExchange />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }
 
